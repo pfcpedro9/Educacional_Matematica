@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int primo (int n) { // A função retorna 1 se o número for primo e 0 se a sentença não for verdadeira.
+	int r = 0, i = 2;
+	for (i = 2; i < n/2; i++) {
+		if (n % i == 0) {
+			r = 0;
+		}
+		else {
+			r = 1;
+		}
+	}
+	return r;
+}
+
+void Goldbach (int P) {
+	int p1 = P, p2 = 0, var = 0;
+	while (var == 0) {
+		p1--;
+		p2++;
+		if (primo(p1) == 1 && primo(p2) == 1) {
+			var = 1;
+		}
+	}
+	printf ("%d\n%d\n", p2, p1);
+	getchar();
+}	
+
+int main (void) {
+	int N;
+	scanf ("%d", &N);
+	while (N % 2 != 0) {
+		scanf ("%d", &N);
+	}
+	Goldbach(N);
+getchar();
+return(0);
+}
+int main (void) {
+	int n;
+	scanf ("%d", &n);
+	numeroPerfeito(n);
+return(0);
+}
