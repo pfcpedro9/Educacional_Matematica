@@ -1,2 +1,2 @@
-# Matem-tica
+# Matemática
 desenvolvimento de softwares matemáticos
